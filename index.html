@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  #create-todo {
+    width: 280px;
+
+  }
+
+  .todo-list__input {
+    width: 250px;
+    outline: transparent;
+
+
+  }
+</style>
+
+<body>
+  <form id="form" class=" w-100 d-flex justify-content-center align-items-center p-4">
+    <input id="create-todo" class="form-control" type="text" placeholder="add-todo">
+    <button class="btn btn-primary ms-2 " type="submit">add</button>
+  </form>
+  <div 
+  class="d-flex justify-content-center">
+  <div class="btn-group " role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check todo-settings__btn" name="btnradio" id="all" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="all">all</label>
+  
+    <input type="radio" class="btn-check todo-settings__btn" name="btnradio" id="complete" autocomplete="off">
+    <label class="btn btn-outline-primary" for="complete">complete</label>
+  
+    <input type="radio" class="btn-check todo-settings__btn" name="btnradio" id="notcomplete" autocomplete="off">
+    <label class="btn btn-outline-primary" for="notcomplete">not complete</label>
+  </div>
+</div>
+ 
+  <ul class="todo-list row-column justify-content-center list-unstyled ">
+    <template>
+
+      <li
+        class=" todo-list__item col-md-4 my-1 mx-auto d-flex justify-content-center align-items-center border-1 border-top border-bottom border-info-subtle py-1">
+        <input id="checkbox" class="form-check-input p-2 me-2" type="checkbox">
+        <input class="todo-list__input form-control " readonly disabled type="text" value="salom">
+        <button class=" btn btn-danger ms-2 rounded-0 delete-btn"><i class="fa-solid fa-trash"></i></button>
+        <button class="btn btn-success rounded-0  edit-btn"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+      </li>
+
+    </template>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+export const getItem = (key: string) => window.localStorage.getItem(key)
+export const setItem = (key: string, value: string | any) => window.localStorage.setItem(key, typeof value === "string" ? value : JSON.stringify(value))
